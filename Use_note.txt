@@ -1,6 +1,6 @@
 git clone  https://github.com/NaviDATA-Repos/MEDS-pooling-system.git
 cd TeachMe-pooling-system
 python -m venv TeachMe
-TeachMe\Scripts\Activate.ps1          # Windows powershell  (Linux/Mac: source TeachMe/bin/activate , Windows cmd: TeachMe\Scripts\activate.bat 		)
+TeachMe\Scripts\Activate.ps1          # Windows powershell  (Linux/Mac: source TeachMe/bin/activate , Windows cmd: TeachMe\Scripts activate.bat)
 pip install -e .
-python -c "from TeachMe_pooling import launch_dashboard; launch_dashboard()"
+python -c "import  TeachMe_pooling as  TeachMe; TeachMe.launch_dashboard()"
