@@ -17,4 +17,5 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["TeachMe_pooling*"]
+where = ["src"]
+include = ["*"]
