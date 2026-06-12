@@ -1,6 +1,6 @@
 """Dashboard class + launcher.
 
-`MHDSDashboard` is based on `SupportMe_Data_Pooling_v4.ipynb`.
+`MEDSDashboard` is based on `SupportMe_Data_Pooling_v4.ipynb`.
 """
 
 from __future__ import annotations
@@ -51,7 +51,7 @@ from ._ui.tokens import (
 MODEL_PLACEHOLDER = "Select a model"
 
 # Browser tab / served-document title.
-APP_TITLE = "MHDS Pooling System"
+APP_TITLE = "MEDS Pooling System"
 
 
 def _detect_colab() -> bool:
@@ -63,8 +63,8 @@ def _detect_colab() -> bool:
         return False
 
 
-class MHDSDashboard(pn.viewable.Viewer):
-    """Mental Health Digital Shadows dashboard."""
+class MEDSDashboard(pn.viewable.Viewer):
+    """Math Education Digital Shadows dashboard."""
 
     def __init__(self, master_df, **params):
         super().__init__(**params)
@@ -298,9 +298,9 @@ class MHDSDashboard(pn.viewable.Viewer):
                         display:flex;align-items:center;gap:14px;">
               <div>
                 <div style="color:#fff;font-size:1.15rem;font-weight:700;
-                            letter-spacing:.3px;">Mental Health Digital Shadows</div>
+                            letter-spacing:.3px;">Math Education Digital Shadows</div>
                 <div style="color:#c5d3e0;font-size:.8rem;margin-top:2px;">
-                  Data Pooling Dashboard · PENSO / SUPPORT ME</div>
+                  Data Pooling Dashboard · PENSO / TEACH ME</div>
               </div>
             </div>
             """,
@@ -571,7 +571,7 @@ def launch_dashboard(
     if df is None:
         df = data.load_pool(data_version=data_version, cache_dir=cache_dir)
 
-    app = MHDSDashboard(df)
+    app = MEDSDashboard(df)
 
     if in_colab:
         app.servable(title=APP_TITLE)

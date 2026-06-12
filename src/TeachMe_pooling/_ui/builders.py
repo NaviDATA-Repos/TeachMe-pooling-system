@@ -376,7 +376,7 @@ def build_networks(row):
         if not edges:
             return pn.pane.Markdown("_No edge list available._")
 
-        lines = "\n".join(f"- **{e[0]}** → {e[1]}" for e in edges)
+        lines = "\n".join(f"- **{e[0]}** - {e[1]}" for e in edges)
         return pn.pane.Markdown(lines, sizing_mode="stretch_width")
         
     
@@ -434,7 +434,7 @@ def build_networks(row):
         #     "neg_1": "#fdecea", "neg_2": "#fdecea",   # light red
         # }
         COL_BG = {
-            "pos_1": "#d7bde2", "pos_2": "#d7bde2",   # darker purple
+            "pos_1": "#648FFF", "pos_2": "#648FFF",   # darker purple
             "neu_1": "#ededed", "neu_2": "#ededed",   # light gray
             "neg_1": "#f1948a", "neg_2": "#f1948a",   # darker red
         }
@@ -477,8 +477,9 @@ def build_networks(row):
 
     return pn.Column(
         description(
-            "**Forma Mentis Networks** — Semantic association network built "
-            "from cue words. Edge List shows all word pairs of the Forma Mentis Network belong to the selected persona; "
+            "**Behavioral forma mentis networks** — Semantic association network built "
+            "from cue words. Edge List shows all word pairs of the behavioral forma mentis networks"
+            "belong to the selected persona; "
             "Valence shows sentiment polarity of each node in the network."
         ),
         active,
