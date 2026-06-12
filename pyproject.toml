@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TeachMe-pooling"
+version = "1.0.0"
+description = "TeachMe pooling system dashboard"
+requires-python = ">=3.10"
+dependencies = [
+    "panel>=1.4",
+    "pandas",
+    "numpy",
+    "pyarrow",      # read_parquet
+    "openpyxl",     # XLSX export
+    "ipython",      # used by dashboard.py
+]
+
+[tool.setuptools.packages.find]
+include = ["TeachMe_pooling*"]
