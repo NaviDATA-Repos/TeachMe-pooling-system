@@ -107,7 +107,9 @@ DATA_VERSION = "v1.0"
 DATA_TAG = "data-v1.0"
 DATA_FILENAME = "df_pooling_system.parquet"
 RELEASE_URL = (
-    "https://github.com/RodolfoRizzi/MHDS-pooling-system"
+    "https://github.com/NaviDATA-Repos/TeachMe-pooling-system"
     f"/releases/download/{DATA_TAG}/{DATA_FILENAME}"
 )
-EXPECTED_SHA256: str | None = None  # update once file is published
+EXPECTED_SHA256: str | None = (
+    "1f4b31923c84c1ca134be5c67b854b8c135ce4273812757bcb10dbce8bff3fcb"
+)
