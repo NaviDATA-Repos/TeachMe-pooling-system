@@ -6,7 +6,8 @@ python -m venv TeachMe
 #   Windows PowerShell:  TeachMe\Scripts\Activate.ps1
 #   Windows cmd:         TeachMe\Scripts\activate.bat
 #   Linux/Mac:           source TeachMe/bin/activate
-TeachMe\Scripts\Activate.ps1
+
+	In case PowerShell blocks the virtual environment activation: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 pip install .
 
